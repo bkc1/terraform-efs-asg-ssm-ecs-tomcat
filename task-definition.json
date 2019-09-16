@@ -1,0 +1,42 @@
+[
+    {
+      "volumesFrom": [],
+      "memory": 256,
+      "extraHosts": [],
+      "dnsServers": null,
+      "disableNetworking": null,
+      "dnsSearchDomains": [],
+      "portMappings": [
+        {
+          "hostPort": ${hostport1},
+          "containerPort": ${containerport1},
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": null,
+      "mountPoints": [],
+      "name": "${container_name}",
+      "ulimits": null,
+      "dockerSecurityOptions": null,
+      "environment": [],
+      "links": null,
+      "workingDirectory": null,
+      "readonlyRootFilesystem": null,
+      "image": "${image}",
+      "command": null,
+      "user": null,
+      "dockerLabels": null,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${log_group_name}",
+          "awslogs-region": "${log_group_region}",
+          "awslogs-stream-prefix": "${log_stream_prefix}"
+        }
+      },
+      "cpu": 256,
+      "privileged": false,
+      "memoryReservation": null
+    }
+]
